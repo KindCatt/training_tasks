@@ -14,11 +14,10 @@
 				v-for="(item, index) in searchNames" :key="index">
 			<li>{{ `${++index}. ${item.name}` }}</li>
 			<button
-					@click="delName">
+					@click="delName(index)">
 				Удалить имя
 			</button>
 		</ul>
-
 	</div>
 </template>
 
@@ -46,7 +45,7 @@ export default {
 			}
 		},
 		delName(index) {
-			this.names.splice(index, 1)
+			this.names.splice(--index, 1)
 		}
 	},
 
