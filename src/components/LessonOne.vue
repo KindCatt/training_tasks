@@ -1,6 +1,6 @@
 <template>
 	<div class="lesson-one">
-		<h1>Урок №1. Счетчик</h1>
+		<h1>Задание №1. Счетчик</h1>
 		<p>От {{ minCount }} до {{ maxCount }}</p>
 
 		<button

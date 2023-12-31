@@ -1,6 +1,6 @@
 <template>
 	<div class="lesson-three">
-		<h1>Урок №3. Условная отрисовка и стили</h1>
+		<h1>Задание №3. Условная отрисовка и стили</h1>
 
 		<button
 				@click="showPoopUpButton">

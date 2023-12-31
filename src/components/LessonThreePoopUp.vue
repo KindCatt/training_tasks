@@ -1,56 +1,56 @@
 <template>
 	<div class="background">
-	<div class="lesson-three-poop-up">
-		<h1>Фильтры</h1>
+		<div class="lesson-three-poop-up">
+			<h1>Фильтры</h1>
 
-		<button
-				@click="imageFilterSepia"
-				:class="{btnNone: this.imgFilters.sepia}">
-			Сепия
-		</button>
-		<button
-				@click="imageFilterBorder"
-				:class="this.imgFilters.border ? 'btnNone' : ''">
-			Граница
-		</button>
-		<button
-				@click="imageFilterShadow"
-				:class="{btnNone: this.imgFilters.shadow}">
-			Тени
-		</button>
+			<button
+					@click="imageFilterSepia"
+					:class="{btnNone: this.imgFilters.sepia}">
+				Сепия
+			</button>
+			<button
+					@click="imageFilterBorder"
+					:class="this.imgFilters.border ? 'btnNone' : ''">
+				Граница
+			</button>
+			<button
+					@click="imageFilterShadow"
+					:class="{btnNone: this.imgFilters.shadow}">
+				Тени
+			</button>
 
-		<p>Ширина: {{ `${imgSizes.currentWidth}px` }}</p>
-		<label>
-			<input type="range"
-					:min="imgSizes.minWidth"
-					:max="imgSizes.maxWidth"
-					v-model="imgSizes.currentWidth"
-					@input="imageSizeRotate">
-		</label>
-		<p>Высота: {{ `${imgSizes.currentHeight}px` }}</p>
-		<label>
-			<input type="range"
-					:min="imgSizes.minHeight"
-					:max="imgSizes.maxHeight"
-					v-model="imgSizes.currentHeight"
-					@input="imageSizeRotate">
-		</label>
-		<p>Угол: {{ `${imgRotate.currentDeg} градусов` }}</p>
-		<label>
-			<input type="range"
-					:min="imgRotate.minDeg"
-					:max="imgRotate.maxDeg"
-					v-model="imgRotate.currentDeg"
-					@input="imageSizeRotate">
-		</label>
+			<p>Ширина: {{ `${imgSizes.currentWidth}px` }}</p>
+			<label>
+				<input type="range"
+						:min="imgSizes.minWidth"
+						:max="imgSizes.maxWidth"
+						v-model="imgSizes.currentWidth"
+						@input="imageSizeRotate">
+			</label>
+			<p>Высота: {{ `${imgSizes.currentHeight}px` }}</p>
+			<label>
+				<input type="range"
+						:min="imgSizes.minHeight"
+						:max="imgSizes.maxHeight"
+						v-model="imgSizes.currentHeight"
+						@input="imageSizeRotate">
+			</label>
+			<p>Угол: {{ `${imgRotate.currentDeg} градусов` }}</p>
+			<label>
+				<input type="range"
+						:min="imgRotate.minDeg"
+						:max="imgRotate.maxDeg"
+						v-model="imgRotate.currentDeg"
+						@input="imageSizeRotate">
+			</label>
 
 
-		<button
-				@click="$emit('closePoopUp')">
-			Закрыть настройки
-		</button>
+			<button
+					@click="$emit('closePoopUp')">
+				Закрыть настройки
+			</button>
+		</div>
 	</div>
-</div>
 </template>
 
 <script>
@@ -114,6 +114,7 @@ export default {
 	position: fixed;
 	top: 50%;
 	left: 50%;
+	z-index: 10;
 	transform: translate(-50%, -50%);
 	width: 500px;
 	height: 70%;
